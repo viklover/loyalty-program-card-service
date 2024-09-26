@@ -5,6 +5,8 @@ plugins {
     id("org.springframework.boot") version "3.1.5"
     id("io.spring.dependency-management") version "1.1.3"
     id("org.openapi.generator") version "7.1.0"
+    id("com.ncorti.ktfmt.gradle") version "0.15.1"
+    id("org.jlleitschuh.gradle.ktlint") version "12.0.2"
     kotlin("jvm") version "1.8.22"
     kotlin("plugin.spring") version "1.8.22"
 }
@@ -37,7 +39,6 @@ dependencies {
     runtimeOnly("org.postgresql:r2dbc-postgresql")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
-
 }
 
 tasks.bootBuildImage {
